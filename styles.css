@@ -1,0 +1,381 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("./images/background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Amatic SC", sans-serif;
+}
+
+#sign_post {
+  width: 60px;
+  height: 60px;
+  /* margin: 20px; */
+  border-radius: 50%;
+}
+
+.title h1 {
+  font-family: "Cabin Sketch", serif;
+  margin-left: 20px;
+  font-size: 2.5rem;
+  color: white;
+}
+
+nav ul {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  list-style-type: none;
+  background-color: #506935;
+}
+
+.nav-links {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin: auto;
+  gap: 2rem;
+  color: white;
+}
+
+.nav-links .item {
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.nav-links .item a {
+  text-decoration: none;
+}
+
+.nav-links .item a:visited,
+.nav-links .item a:active,
+.nav-links .item a:hover,
+.nav-links .item a:link {
+  color: white;
+}
+
+.nav-links .item:hover {
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+  flex: 1; /* Makes input grow */
+  border-radius: 20px;
+  color: #506935;
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  color: #506935;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.search-button,
+.clear-button,
+.btn_book_now {
+  background-color: #80a05c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover,
+.clear-button:hover,
+.btn_book_now:hover {
+  background-color: #506935; /* Slightly darker shade on hover */
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed; /* Keeps it fixed on the left */
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+/* Vertical line */
+.vertical-line {
+  width: 2px; /* Thickness of the line */
+  height: 100px; /* Height of the line */
+  background-color: white;
+  /* margin-bottom: 30px; Gap between the line and icons */
+  margin: 3rem 0;
+}
+
+.social-icons a {
+  display: block;
+  margin: 10px 0; /* Space between icons */
+  text-decoration: none; /* Remove underline */
+  color: white; /* Default color of icons */
+  font-size: 24px; /* Icon size */
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Color change on hover */
+}
+
+.hero {
+  margin-left: 6rem;
+  margin-top: 6rem;
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+
+  padding-left: 1rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: -99;
+  border-radius: 1rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bolder;
+  padding: 1rem;
+}
+
+.btn_book_now {
+  margin: 3rem 1rem;
+}
+
+/* about us styling */
+/* Section styling */
+.company-info,
+.team {
+  text-align: center;
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+.company-info h2 {
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+.company-info p,
+.team p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.team {
+  margin: 6rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+.team h2 {
+  color: white;
+  font-size: 2.5rem;
+}
+.team-member {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 250px;
+  height: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-member-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.team-member:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.team-member h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #505050;
+}
+
+.bio {
+  font-size: 1rem;
+  color: #111;
+  margin-top: 1rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* contact us page */
+
+/* General styling for the Contact Us section */
+.contact-us {
+  padding: 3rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.7)
+  );
+  text-align: center;
+}
+
+.contact-us h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.contact-us p {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+/* Form container */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Labels */
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Input fields */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Submit button */
+.submit-button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-us h2 {
+    font-size: 2rem;
+  }
+
+  .contact-us p {
+    font-size: 1rem;
+  }
+}
