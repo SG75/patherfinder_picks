@@ -15,6 +15,10 @@ body {
   font-family: "Amatic SC", sans-serif;
 }
 
+main {
+  display: flex;
+}
+
 #sign_post {
   width: 60px;
   height: 60px;
@@ -101,7 +105,8 @@ nav ul {
 
 .search-button,
 .clear-button,
-.btn_book_now {
+.btn_book_now,
+.btn_visit {
   background-color: #80a05c;
   color: white;
   border: none;
@@ -115,7 +120,8 @@ nav ul {
 
 .search-button:hover,
 .clear-button:hover,
-.btn_book_now:hover {
+.btn_book_now:hover,
+.btn_visit {
   background-color: #506935; /* Slightly darker shade on hover */
 }
 
@@ -127,6 +133,10 @@ nav ul {
   top: 50%;
   left: 10px;
   transform: translateY(-50%); /* Center vertically */
+}
+
+.sidebar {
+  flex: 0 0 50px; /* Adjust width as needed */
 }
 
 /* Vertical line */
@@ -154,8 +164,10 @@ nav ul {
   margin-left: 6rem;
   margin-top: 6rem;
   width: 30%;
-  height: 100%;
+  height: 80%;
   position: relative;
+  flex: 1;
+  padding: 20px;
 }
 
 .hero::before {
@@ -190,6 +202,78 @@ nav ul {
 
 .btn_book_now {
   margin: 3rem 1rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.search-results {
+  flex: 1;
+  padding: 2rem;
+  margin: 2rem;
+  background: transparent;
+  /* border-left: 2px solid #ccc; */ /* display a vertical line to left*/
+}
+
+.search-results h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-results li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.search-results img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 1rem;
+  background-color: #f9f9f9;
+}
+
+.result-image {
+  /* width: 100px;
+  height: 100px; */
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.result-info {
+  flex-grow: 1;
+}
+
+.result-info h3 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.result-info p {
+  margin: 10px 0 0;
+  color: #111;
+  font-size: 18px;
 }
 
 /* about us styling */
